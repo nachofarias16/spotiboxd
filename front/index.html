@@ -13,8 +13,7 @@
             </a>
         </div>
         <ul class="navbar-links">
-            <li><a href="#" id="login-link">Iniciar sesión</a></li>
-            <li><a href="#" id="register-link">Crear cuenta</a></li>
+            <li><a href="#" id="login-link">Ingresar</a></li>
             <li><a href="#">Canciones</a></li>
             <li><a href="#">Álbumes</a></li>
         </ul>
@@ -28,6 +27,81 @@
             </button>
         </div>
     </nav>
-    <!-- Aquí irá el resto del contenido -->
-    ...existing code...
+    <!--ACA ABAJO EL LOGIN-->
+    <div id="modal-overlay" class="modal-overlay" aria-modal="true" role="dialog" aria-label="Iniciar sesión">
+    <div class="modal-wrap" id="modal-wrap">
+        <button class="modal-close" id="modal-close" aria-label="Cerrar">&times;</button>
+    
+        <div class="modal-header">
+        <div class="modal-dots">
+            <span class="modal-dot md1"></span>
+            <span class="modal-dot md2"></span>
+            <span class="modal-dot md3"></span>
+        </div>
+        <span class="modal-title">Spotiboxd</span>
+        </div>
+    
+        <div class="modal-tabs">
+        <button class="modal-tab active" id="tab-login"    onclick="switchTab('login')">Iniciar sesión</button>
+        <button class="modal-tab"        id="tab-register" onclick="switchTab('register')">Crear cuenta</button>
+        </div>
+    
+        <!-- ── Formulario LOGIN ── -->
+        <div id="form-login">
+        <div class="modal-field">
+            <label for="login-email">Correo electrónico</label>
+            <input type="email" id="login-email" placeholder="tu@email.com" autocomplete="email">
+            <span class="modal-error" id="err-login-email">Ingresá un email válido.</span>
+        </div>
+        <div class="modal-field">
+            <label for="login-pass">Contraseña</label>
+            <input type="password" id="login-pass" placeholder="••••••••" autocomplete="current-password">
+            <span class="modal-error" id="err-login-pass">La contraseña no puede estar vacía.</span>
+        </div>
+        <a class="modal-forgot" href="#">¿Olvidaste tu contraseña?</a>
+        <button class="modal-btn-primary" onclick="handleLogin()">Entrar</button>
+    
+        <div class="modal-divider"><span>o continuá con</span></div>
+        <button class="modal-btn-oauth" onclick="oauthClick('Google')">
+            <svg viewBox="0 0 48 48" width="16" height="16">
+            <path fill="#EA4335" d="M24 9.5c3.14 0 5.95 1.08 8.17 2.85L38.3 6.2A23.74 23.74 0 0024 0C14.57 0 6.44 5.37 2.44 13.22l7.03 5.46C11.34 12.64 17.16 9.5 24 9.5z"/>
+            <path fill="#4285F4" d="M46.1 24.5c0-1.6-.14-3.13-.4-4.6H24v8.72h12.4a10.6 10.6 0 01-4.6 6.96l7.1 5.52C42.9 37.03 46.1 31.2 46.1 24.5z"/>
+            <path fill="#FBBC05" d="M9.47 28.68A14.56 14.56 0 019 24c0-1.63.28-3.2.47-4.68L2.44 13.86A23.78 23.78 0 000 24c0 3.82.9 7.44 2.44 10.68l7.03-5.99z"/>
+            <path fill="#34A853" d="M24 48c6.48 0 11.93-2.15 15.9-5.84l-7.1-5.52A14.49 14.49 0 0124 38.5c-6.84 0-12.66-3.14-14.53-8.68l-7.03 5.99A23.95 23.95 0 0024 48z"/>
+            </svg>
+            Google
+        </button>
+    
+        <div class="modal-success" id="success-login">Iniciando sesión...</div>
+        </div>
+    
+        <!-- ── Formulario REGISTRO ── -->
+        <div id="form-register" style="display:none">
+        <div class="modal-field">
+            <label for="reg-user">Nombre de usuario</label>
+            <input type="text" id="reg-user" placeholder="tunombre" autocomplete="username">
+            <span class="modal-error" id="err-reg-user">Ingresá un nombre de usuario.</span>
+        </div>
+        <div class="modal-field">
+            <label for="reg-email">Correo electrónico</label>
+            <input type="email" id="reg-email" placeholder="tu@email.com" autocomplete="email">
+            <span class="modal-error" id="err-reg-email">Ingresá un email válido.</span>
+        </div>
+        <div class="modal-field">
+            <label for="reg-pass">Contraseña</label>
+            <input type="password" id="reg-pass" placeholder="Mínimo 8 caracteres" autocomplete="new-password">
+            <span class="modal-error" id="err-reg-pass">Mínimo 8 caracteres.</span>
+        </div>
+        <button class="modal-btn-primary" onclick="handleRegister()" style="margin-top:0.5rem">Crear cuenta</button>
+        <div class="modal-success" id="success-register">Cuenta creada. Redirigiendo...</div>
+        </div>
+    
+        <div class="modal-footer" id="footer-login">
+        ¿No tenés cuenta? <a href="#" onclick="switchTab('register');return false;">Registrate gratis</a>
+        </div>
+        <div class="modal-footer" id="footer-register" style="display:none">
+        ¿Ya tenés cuenta? <a href="#" onclick="switchTab('login');return false;">Iniciá sesión</a>
+        </div>
+    </div>
+    </div>
 </body>
