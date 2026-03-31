@@ -102,6 +102,7 @@ body {
   background: rgba(52, 58, 64, 0.35);
   border-radius: 20px;
   padding: 2px 12px;
+}
 .navbar:hover {
   box-shadow: inset 0 10px 20px -10px rgba(29, 185, 84, 0.6);
   transition: box-shadow 0.5s;
@@ -322,7 +323,7 @@ body {
 
 .modal-title {
   color: var(--m-text);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -342,7 +343,7 @@ body {
   flex: 1;
   padding: 7px 0;
   text-align: center;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--m-text-muted);
@@ -369,7 +370,7 @@ body {
 }
 
 .modal-field label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 0.68rem;
   font-weight: 600;
   color: var(--m-text-muted);
@@ -384,7 +385,7 @@ body {
   border-radius: 8px;
   padding: 10px 13px;
   color: var(--m-text);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 0.87rem;
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
@@ -408,7 +409,7 @@ body {
 
 .modal-error {
   display: none;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 0.7rem;
   color: var(--m-error);
   margin-top: 4px;
@@ -419,7 +420,7 @@ body {
 .modal-forgot {
   display: block;
   text-align: right;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 0.7rem;
   color: var(--m-text-muted);
   text-decoration: none;
@@ -440,7 +441,7 @@ body {
   border: none;
   border-radius: 8px;
   color: #071a0d;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 0.87rem;
   font-weight: 700;
   cursor: pointer;
@@ -481,7 +482,7 @@ body {
 }
 
 .modal-divider span {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 0.7rem;
   color: var(--m-text-muted);
   white-space: nowrap;
@@ -496,7 +497,7 @@ body {
   border: 0.5px solid var(--m-border);
   border-radius: 8px;
   color: var(--m-text);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 0.81rem;
   font-weight: 600;
   cursor: pointer;
@@ -519,7 +520,7 @@ body {
   display: none;
   text-align: center;
   padding: 0.75rem 0 0.25rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 0.87rem;
   font-weight: 600;
   color: var(--m-green);
@@ -539,7 +540,7 @@ body {
 
 .modal-footer {
   text-align: center;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 0.73rem;
   color: var(--m-text-muted);
   margin-top: 1.2rem;
